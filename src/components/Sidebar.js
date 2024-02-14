@@ -2,7 +2,7 @@ import React from "react";
 
 const Sidebar = () => {
   return (
-    <div className="Sidebar fixed">
+    <div className="Sidebar fixed z-10">
       <section className="bg-slate-100 h-screen w-16">
         <ul className="menu-vertical p-4 rounded-full flex items-center justify-center">
           <a href="/">
