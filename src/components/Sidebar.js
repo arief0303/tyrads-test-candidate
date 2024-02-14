@@ -5,14 +5,18 @@ const Sidebar = () => {
     <div className="Sidebar fixed z-10">
       <section className="bg-slate-100 h-screen w-16">
         <ul className="menu-vertical p-4 rounded-full flex items-center justify-center">
+          <div className="btn-ghost btn-circle flex items-center justify-center">
           <a href="/">
-            <h1>
-              <b>S.</b>
+            <h1 className="font-bold text-2xl">
+              S.
             </h1>
           </a>
+          </div>
         </ul>
-        <ul className="menu-vertical m-4 rounded-full flex items-center justify-center">
-          <button className="btn btn-sm btn-warning btn-circle">
+        <ul className="menu-vertical m-4 rounded-full flex items-center justify-center tooltip tooltip-right" data-tip="Contact Us">
+        
+
+          <button className="btn btn-sm btn-warning btn-circle ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -33,7 +37,10 @@ const Sidebar = () => {
         <br />
         <ul className="menu-vertical m-4 rounded-full flex items-center justify-center bg-gray-200">
           <li>
-            <a className="p-2 tooltip tooltip-right" data-tip="Home">
+            <a
+              className="p-2 tooltip tooltip-right btn-ghost btn-circle flex items-center justify-center"
+              data-tip="Home"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -51,7 +58,10 @@ const Sidebar = () => {
             </a>
           </li>
           <li>
-            <a className="p-2 tooltip tooltip-right" data-tip="Notification">
+            <a
+              className="p-2 tooltip tooltip-right btn-ghost btn-circle flex items-center justify-center"
+              data-tip="Notification"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -69,7 +79,10 @@ const Sidebar = () => {
             </a>
           </li>
           <li>
-            <a className="p-2 tooltip tooltip-right" data-tip="Schedule">
+            <a
+              className="p-2 tooltip tooltip-right btn-ghost btn-circle flex items-center justify-center"
+              data-tip="Schedule"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -87,7 +100,10 @@ const Sidebar = () => {
             </a>
           </li>
           <li>
-            <a className="p-2 tooltip tooltip-right" data-tip="Social">
+            <a
+              className="p-2 tooltip tooltip-right btn-ghost btn-circle flex items-center justify-center"
+              data-tip="Social"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -105,7 +121,10 @@ const Sidebar = () => {
             </a>
           </li>
           <li>
-            <a className="p-2 tooltip tooltip-right" data-tip="Inbox">
+            <a
+              className="p-2 tooltip tooltip-right btn-ghost btn-circle flex items-center justify-center"
+              data-tip="Inbox"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -123,7 +142,10 @@ const Sidebar = () => {
             </a>
           </li>
           <li>
-            <a className="p-2 tooltip tooltip-right" data-tip="Settings">
+            <a
+              className="p-2 tooltip tooltip-right btn-ghost btn-circle flex items-center justify-center"
+              data-tip="Settings"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -148,21 +170,12 @@ const Sidebar = () => {
         </ul>
         <br />
         <ul className="menu-vertical bg-gray-200 m-4 rounded-full flex items-center justify-center">
-          {/* <li>
-            <a className="p-2 pt-0 tooltip tooltip-right" data-tip="Profile">
-              <div className="avatar w-full flex items-center justify-center">
-                <div className="rounded-full w-6 m-1">
-                  <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                </div>
-              </div>
-            </a>
-          </li> */}
           <div className="flex">
             <div className="dropdown dropdown-right">
               <div
                 tabIndex={0}
                 role="button"
-                className="btn btn-ghost btn-circle avatar"
+                className="btn btn-ghost btn-circle avatar flex items-center justify-center" 
                 data-tip="Profile"
               >
                 <div className="w-5 rounded-full">
@@ -177,9 +190,7 @@ const Sidebar = () => {
                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
                 <li>
-                  <a className="justify-between">
-                    Profile
-                  </a>
+                  <a className="justify-between">Profile</a>
                 </li>
                 <li>
                   <a>Settings</a>
@@ -188,7 +199,7 @@ const Sidebar = () => {
             </div>
           </div>
           <li>
-            <a className="p-1 tooltip tooltip-right" data-tip="Logout">
+            <a className="p-1 tooltip tooltip-right btn-ghost btn-circle flex items-center justify-center" data-tip="Logout">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
