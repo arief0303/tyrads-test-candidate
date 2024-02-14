@@ -20,7 +20,7 @@ const Notification = () => (
             </div>
             <div className="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7">
               <p>
-                  <Link href="/" className="text-blue-600 hover:text-blue-800" >Go back to Home.</Link>
+                  <Link href="/" className="text-primary hover:text-blue-800" >Go back to Home.</Link>
               </p>
             </div>
           </div>

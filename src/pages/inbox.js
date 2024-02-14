@@ -21,7 +21,7 @@ export default function Inbox() {
             </li>
           ))}
         </ul>
-        <Link href="/" className="mt-4 inline-block bg-blue-500 text-white rounded px-4 py-2">
+        <Link href="/" className="mt-4 inline-block bg-primary text-white rounded px-4 py-2">
           Go back
         </Link>
       </div>
