@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 function AmountStats({}) {
   return (
     <>
@@ -6,7 +8,9 @@ function AmountStats({}) {
           <div className="stat-title">Amount to be Collected</div>
           <div className="stat-value">IDR 12.5M</div>
           <div className="stat-actions">
-            <button className="btn btn-xs">View Users</button>
+            <Link href="/404">
+            <button className="btn btn-xs">View Details</button>
+            </Link>
           </div>
         </div>
       </div>
@@ -15,7 +19,9 @@ function AmountStats({}) {
           <div className="stat-title">Cash in hand</div>
           <div className="stat-value">IDR 6.100K</div>
           <div className="stat-actions">
-            <button className="btn btn-xs">View Members</button>
+          <Link href="/404">
+            <button className="btn btn-xs">View Details</button>
+            </Link>
           </div>
         </div>
       </div>

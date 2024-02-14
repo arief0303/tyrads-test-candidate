@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Premium = () => {
@@ -34,7 +35,9 @@ const Premium = () => {
         <h2 className="card-title">Need more features?</h2>
         <p>Update your account to premium to get more features.</p>
         <div className="card-actions">
-          <button className="btn btn-primary w-52">Get It Now</button>
+          <Link href="/pricing">
+            <button className="btn btn-primary w-52">Get It Now</button>
+          </Link>
         </div>
       </div>
     </div>

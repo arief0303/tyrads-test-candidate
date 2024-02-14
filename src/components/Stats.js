@@ -10,7 +10,7 @@ const Stats = () => {
         <div className="grid lg:grid-cols-1 mt-10 grid-cols-1 gap-6 p-4">
           <AmountStats />
           <PageStats />
-        <Premium/>
+          <Premium />
         </div>
       </section>
     </div>
