@@ -11,7 +11,7 @@ const Sidebar = () => {
             </h1>
           </a>
         </ul>
-        <ul className="menu-vertical bg-base-200 m-4 rounded-full flex items-center justify-center">
+        <ul className="menu-vertical m-4 rounded-full flex items-center justify-center">
           <button className="btn btn-sm btn-warning btn-circle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +31,7 @@ const Sidebar = () => {
         </ul>
         <br />
         <br />
-        <ul className="menu-vertical bg-base-200 m-4 rounded-full flex items-center justify-center">
+        <ul className="menu-vertical m-4 rounded-full flex items-center justify-center bg-gray-200">
           <li>
             <a className="p-2 tooltip tooltip-right" data-tip="Home">
               <svg
@@ -147,7 +147,7 @@ const Sidebar = () => {
           </li>
         </ul>
         <br />
-        <ul className="menu-vertical bg-base-200 m-4 rounded-full flex items-center justify-center">
+        <ul className="menu-vertical bg-gray-200 m-4 rounded-full flex items-center justify-center">
           {/* <li>
             <a className="p-2 pt-0 tooltip tooltip-right" data-tip="Profile">
               <div className="avatar w-full flex items-center justify-center">
