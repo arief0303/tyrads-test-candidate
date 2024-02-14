@@ -37,7 +37,7 @@ const statsData = [
   },
 ];
 
-const Body = () => {
+const Dashboard = () => {
   return (
     <>
       {/* <div className="grid lg:grid-cols-4 mt-2 md:grid-cols-2 grid-cols-1 gap-6 overflow-auto">
@@ -59,4 +59,4 @@ const Body = () => {
   );
 };
 
-export default Body;
+export default Dashboard;
