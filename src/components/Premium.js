@@ -34,7 +34,7 @@ const Premium = () => {
         <h2 className="card-title">Need more features?</h2>
         <p>Update your account to premium to get more features.</p>
         <div className="card-actions">
-          <button className="btn btn-primary w-52">Get Now</button>
+          <button className="btn btn-primary w-52">Get It Now</button>
         </div>
       </div>
     </div>
