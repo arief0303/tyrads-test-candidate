@@ -146,9 +146,9 @@ const Sidebar = () => {
             </a>
           </li>
         </ul>
-        <br/>
+        <br />
         <ul className="menu-vertical bg-base-200 m-4 rounded-full flex items-center justify-center">
-          <li>
+          {/* <li>
             <a className="p-2 pt-0 tooltip tooltip-right" data-tip="Profile">
               <div className="avatar w-full flex items-center justify-center">
                 <div className="rounded-full w-6 m-1">
@@ -156,7 +156,36 @@ const Sidebar = () => {
                 </div>
               </div>
             </a>
-          </li>
+          </li> */}
+          <div className="flex">
+            <div className="dropdown dropdown-right">
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn btn-ghost btn-circle avatar"
+              >
+                <div className="w-5 rounded-full">
+                  <img
+                    alt="Tailwind CSS Navbar component"
+                    src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                  />
+                </div>
+              </div>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <a className="justify-between">
+                    Profile
+                  </a>
+                </li>
+                <li>
+                  <a>Settings</a>
+                </li>
+              </ul>
+            </div>
+          </div>
           <li>
             <a className="p-1 tooltip tooltip-right" data-tip="Logout">
               <svg
