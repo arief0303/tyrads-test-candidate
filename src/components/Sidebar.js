@@ -163,6 +163,7 @@ const Sidebar = () => {
                 tabIndex={0}
                 role="button"
                 className="btn btn-ghost btn-circle avatar"
+                data-tip="Profile"
               >
                 <div className="w-5 rounded-full">
                   <img

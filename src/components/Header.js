@@ -11,7 +11,7 @@ const Header = () => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li>
+          {/* <li>
             <a>Item 1</a>
           </li>
           <li>
@@ -29,10 +29,10 @@ const Header = () => {
           </li>
           <li>
             <a>Item 3</a>
-          </li>
+          </li> */}
         </ul>
       </div>
-      <div className="navbar-end pr-64">
+      <div className="navbar-end pr-80">
         <button className="btn btn-ghost btn-circle">
           <svg
             xmlns="http://www.w3.org/2000/svg"
