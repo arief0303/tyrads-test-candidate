@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Preferences() {
   const [preference, setPreference] = useState({
@@ -7,11 +7,21 @@ export default function Preferences() {
   });
 
   const handleInputChange = (event) => {
-    setPreference({
+    /* setPreference({
       ...preference,
       [event.target.name]: event.target.checked,
-    });
+    }); */
+    alert('This feature is not available yet.');
+    return;
   };
+
+  useEffect(() => {
+    if (preference.darkMode) {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
+  }, [preference.darkMode]);
 
   return (
     <div className="p-4 pl-[6rem]">
