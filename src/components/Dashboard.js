@@ -38,13 +38,13 @@ const statsData = [
 
 const Dashboard = () => {
   return (
-    <div className="overflow-auto">
+    <div className="overflow-y">
       {/* <div className="grid lg:grid-cols-4 mt-2 md:grid-cols-2 grid-cols-1 gap-6 overflow-auto">
         {statsData.map((d, k) => {
           return <DashboardStats key={k} {...d} colorIndex={k} />;
         })}
       </div> */}
-      <div className="Dashboard bg-base-100 h-screen w-screen pl-[6rem] pr-[23rem]">
+      <div className="Dashboard w-screen pl-[6rem] pr-[23rem] overflow-auto">
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-6">
           <LineChart />
           <BarChart />
