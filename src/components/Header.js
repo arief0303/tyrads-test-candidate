@@ -5,7 +5,7 @@ const Header = () => {
     <div className="navbar pl-20">
       <div className="navbar-start">
         <article className="prose prose-sm">
-          <h1 className="m-0">Hello, Jhon .D</h1>
+          <h1 className="m-0">Hello, Samantha Davis.</h1>
           <p className="m-0">View and control your finances here!</p>
         </article>
       </div>

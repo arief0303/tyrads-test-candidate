@@ -1,21 +1,21 @@
 import React from "react";
+import Link from "next/link";
 
 const Sidebar = () => {
   return (
     <div className="Sidebar fixed z-10">
       <section className="bg-slate-100 h-screen w-16">
         <ul className="menu-vertical p-4 rounded-full flex items-center justify-center">
-          <div className="btn-ghost btn-circle flex items-center justify-center">
-          <a href="/">
-            <h1 className="font-bold text-2xl">
-              S.
-            </h1>
-          </a>
+          <div className="flex items-center justify-center">
+            <a href="/">
+              <h1 className="font-bold text-2xl">S.</h1>
+            </a>
           </div>
         </ul>
-        <ul className="menu-vertical m-4 rounded-full flex items-center justify-center tooltip tooltip-right" data-tip="Contact Us">
-        
-
+        <ul
+          className="menu-vertical m-4 rounded-full flex items-center justify-center tooltip tooltip-right"
+          data-tip="Contact Us"
+        >
           <button className="btn btn-sm btn-warning btn-circle ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,8 @@ const Sidebar = () => {
         <br />
         <ul className="menu-vertical m-4 rounded-full flex items-center justify-center bg-gray-200">
           <li>
-            <a
+            <Link
+              href="/"
               className="p-2 tooltip tooltip-right btn-ghost btn-circle flex items-center justify-center"
               data-tip="Home"
             >
@@ -55,7 +56,7 @@ const Sidebar = () => {
                   d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
                 />
               </svg>
-            </a>
+            </Link>
           </li>
           <li>
             <a
@@ -175,7 +176,7 @@ const Sidebar = () => {
               <div
                 tabIndex={0}
                 role="button"
-                className="btn btn-ghost btn-circle avatar flex items-center justify-center" 
+                className="btn btn-ghost btn-circle avatar flex items-center justify-center"
                 data-tip="Profile"
               >
                 <div className="w-5 rounded-full">
@@ -190,7 +191,9 @@ const Sidebar = () => {
                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
                 <li>
-                  <a className="justify-between">Profile</a>
+                  <Link href="/profile" className="justify-between">
+                    Profile
+                  </Link>
                 </li>
                 <li>
                   <a>Settings</a>
@@ -199,7 +202,10 @@ const Sidebar = () => {
             </div>
           </div>
           <li>
-            <a className="p-1 tooltip tooltip-right btn-ghost btn-circle flex items-center justify-center" data-tip="Logout">
+            <a
+              className="p-1 tooltip tooltip-right btn-ghost btn-circle flex items-center justify-center"
+              data-tip="Logout"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

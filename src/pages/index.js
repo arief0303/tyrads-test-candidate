@@ -7,7 +7,7 @@ import Dashboard from "@/components/Dashboard";
 export default function index() {
   return (
     <>
-      <Sidebar />
+      {/* <Sidebar /> */}
       <Stats />
       <Header />
       <Dashboard />
