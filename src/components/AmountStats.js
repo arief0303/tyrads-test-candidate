@@ -8,7 +8,7 @@ function AmountStats({}) {
           <div className="stat-title">Amount to be Collected</div>
           <div className="stat-value">IDR 12.5M</div>
           <div className="stat-actions">
-            <Link href="/404">
+            <Link href="/transactions">
             <button className="btn btn-xs">View Details</button>
             </Link>
           </div>
@@ -19,7 +19,7 @@ function AmountStats({}) {
           <div className="stat-title">Cash in hand</div>
           <div className="stat-value">IDR 6.100K</div>
           <div className="stat-actions">
-          <Link href="/404">
+          <Link href="/transactions">
             <button className="btn btn-xs">View Details</button>
             </Link>
           </div>
