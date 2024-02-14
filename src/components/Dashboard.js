@@ -4,11 +4,10 @@ import BarChart from "./BarChart";
 import DashboardStats from "./DashboardStats";
 import UserChannels from "./UserChannels";
 import DoughnutChart from "./DoughnutChart";
-import UserGroupIcon  from '@heroicons/react/24/outline/UserGroupIcon'
-import CreditCardIcon  from '@heroicons/react/24/outline/CreditCardIcon'
-import CircleStackIcon  from '@heroicons/react/24/outline/CircleStackIcon'
-import UsersIcon  from '@heroicons/react/24/outline/UsersIcon'
-
+import UserGroupIcon from "@heroicons/react/24/outline/UserGroupIcon";
+import CreditCardIcon from "@heroicons/react/24/outline/CreditCardIcon";
+import CircleStackIcon from "@heroicons/react/24/outline/CircleStackIcon";
+import UsersIcon from "@heroicons/react/24/outline/UsersIcon";
 
 const statsData = [
   {
@@ -51,9 +50,9 @@ const Dashboard = () => {
           <BarChart />
         </div>
         <div className="grid lg:grid-cols-2 mt-4 grid-cols-1 gap-6">
-                <UserChannels />
-                <DoughnutChart />
-            </div>
+          <UserChannels />
+          <DoughnutChart />
+        </div>
       </div>
     </>
   );
