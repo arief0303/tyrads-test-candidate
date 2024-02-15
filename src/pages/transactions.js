@@ -53,7 +53,7 @@ const TopSideButtons = ({ removeFilter, applyFilter, applySearch }) => {
   }, [searchText]);
 
   return (
-    <div className="inline-block float-right">
+    <div className="inline-block float-right bg-white">
       <SearchBar
         searchText={searchText}
         styleClass="mr-4"
@@ -75,7 +75,7 @@ const TopSideButtons = ({ removeFilter, applyFilter, applySearch }) => {
         </label>
         <ul
           tabIndex={0}
-          className="dropdown-content menu p-2 text-sm shadow bg-base-100 rounded-box w-52"
+          className="dropdown-content menu p-2 text-sm shadow bg-base-100 rounded-box w-52 z-10"
         >
           {locationFilters.map((l, k) => {
             return (
