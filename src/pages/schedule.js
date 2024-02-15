@@ -31,7 +31,7 @@ export default function Schedule() {
   return (
     <div className="min-h-screen w-screen py-6 flex flex-col justify-center sm:py-12">
       <div className="px-20">
-        <div className="relative bg-white shadow-xl rounded-3xl p-10 w-[57%]">
+        <div className="relative bg-white shadow-xl rounded-3xl p-10 w-[451px]">
           <div className="flex items-center space-x-5">
             <div className="block pl-2 font-semibold text-xl self-start text-gray-700">
               <article className="prose prose-sm">
