@@ -38,7 +38,7 @@ const LoginPage = () => {
                   <input
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    autocomplete="off"
+                    autoComplete="off"
                     id="email"
                     name="email"
                     type="text"
@@ -46,7 +46,7 @@ const LoginPage = () => {
                     className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-rose-600 focus:ring-0"
                   />
                   <label
-                    for="email"
+                    htmlFor="email"
                     className="absolute left-0 -top-3.5 text-gray-600 text-sm leading-7 px-2 bg-white peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-rose-600 peer-focus:text-sm"
                   >
                     Email Address
@@ -56,7 +56,7 @@ const LoginPage = () => {
                   <input
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    autocomplete="off"
+                    autoComplete="off"
                     id="password"
                     name="password"
                     type="password"
@@ -64,7 +64,7 @@ const LoginPage = () => {
                     className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-rose-600 focus:ring-0"
                   />
                   <label
-                    for="password"
+                    htmlFor="password"
                     className="absolute left-0 -top-3.5 text-gray-600 text-sm leading-7 px-2 bg-white peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-rose-600 peer-focus:text-sm"
                   >
                     Password
