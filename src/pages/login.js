@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 
 const LoginPage = () => {
   const router = useRouter();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSignIn = async () => {
     // Here you would typically send a request to your server to authenticate the user.
@@ -24,13 +26,18 @@ const LoginPage = () => {
         <div className="relative px-4 py-10 bg-white shadow-xl sm:rounded-3xl sm:p-20">
           <div className="max-w-md mx-auto">
             <div>
-              <img src="https://tyrads.com/wp-content/uploads/2022/07/Logo-1-e1682960338366.png" className="h-7 sm:h-8" />
+              <img
+                src="https://tyrads.com/wp-content/uploads/2022/07/Logo-1-e1682960338366.png"
+                className="h-7 sm:h-8"
+              />
               <p>Candidate test project by Arief R. Syauqie</p>
             </div>
             <div className="divide-y divide-gray-200">
               <div className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
                 <div className="relative">
                   <input
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     autocomplete="off"
                     id="email"
                     name="email"
@@ -47,6 +54,8 @@ const LoginPage = () => {
                 </div>
                 <div className="relative">
                   <input
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                     autocomplete="off"
                     id="password"
                     name="password"
@@ -65,7 +74,10 @@ const LoginPage = () => {
               <div className="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7">
                 <button
                   onClick={handleSignIn}
-                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-base font-bold text-white bg-primary hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                  disabled={!email || !password}
+                  className={`w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-base font-bold text-white bg-primary hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary ${
+                    !email || !password ? "opacity-50 cursor-not-allowed" : ""
+                  }`}
                 >
                   Sign in
                 </button>
@@ -73,7 +85,16 @@ const LoginPage = () => {
               <div className="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7">
                 <p>
                   Don't have an account?
-                  <a href="#" className="text-primary hover:text-secondary">
+                  <a
+                    href="#"
+                    className="text-primary hover:text-secondary"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      alert(
+                        "No need to sign up now! This just a demo test. Please fill in the email and password with any value to continue :)"
+                      );
+                    }}
+                  >
                     {" "}
                     Sign up
                   </a>
