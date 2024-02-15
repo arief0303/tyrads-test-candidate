@@ -5,7 +5,7 @@ const Header = () => {
     <div className="navbar pl-20">
       <div className="navbar-start">
         <article className="prose prose-sm">
-          <h1 className="m-0">Hello, Samantha Davis.</h1>
+          <h1 className="mb-0 my-5">Hello, Samantha Davis.</h1>
           <p className="m-0">View and control your finances here!</p>
         </article>
       </div>
@@ -32,7 +32,7 @@ const Header = () => {
           </li> */}
         </ul>
       </div>
-      <div className="navbar-end pr-80">
+      <div className="navbar-end mt-10 pr-[21rem]">
         <button className="btn btn-ghost btn-circle">
           <svg
             xmlns="http://www.w3.org/2000/svg"

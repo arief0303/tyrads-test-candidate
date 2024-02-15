@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import TitleCard from "@/components/TitleCard";
 
 function checkUserAuthentication(req) {
   // Check the request headers, cookies, etc. to see if the user is authenticated.
@@ -46,16 +47,19 @@ export default function Preferences() {
   }, [preference.darkMode]);
 
   return (
-      <div className="flex items-center justify-center min-h-screen pl-[6rem]">
-        <div className="container">
-          <h1 className="text-4xl mb-4">Preferences</h1>
+    <div className="flex items-center justify-center min-h-screen pl-[6rem] w-fit">
+      <div className="container">
+        <TitleCard title="Preferences">
+          <p className="text-gray-500 mb-10">
+            Set your preferences for the application.
+          </p>
           <div className="space-y-4">
             <div>
               <label className="flex items-center space-x-3">
                 <input
                   type="checkbox"
                   name="notifications"
-                  className="form-checkbox h-5 w-5 text-blue-600"
+                  className="form-checkbox h-5 w-5 text-primary"
                 />
                 <span className="text-gray-900 font-medium">
                   Enable Notifications
@@ -76,7 +80,8 @@ export default function Preferences() {
                 </span>
               </label>
             </div>
-        </div>
+          </div>
+        </TitleCard>
       </div>
     </div>
   );

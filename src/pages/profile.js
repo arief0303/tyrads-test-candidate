@@ -5,7 +5,7 @@ import Link from "next/link";
 function checkUserAuthentication(req) {
   // Check the request headers, cookies, etc. to see if the user is authenticated.
   // Return true if they are, false if they are not.
-  return req.cookies.authenticated === 'true';
+  return req.cookies.authenticated === "true";
 }
 
 export async function getServerSideProps(context) {
@@ -14,23 +14,23 @@ export async function getServerSideProps(context) {
   if (!isAuthenticated) {
     return {
       redirect: {
-        destination: '/login',
+        destination: "/login",
         permanent: false,
       },
-    }
+    };
   }
 
   // If the user is authenticated, return the normal props.
-  return { props: {} }
+  return { props: {} };
 }
 
 const Profile = () => (
   <div>
     <div className="overflow-y">
       {/* <div className="Dashboard w-screen pl-[6rem] pr-[23rem] overflow-auto"></div> */}
-      <div className="Dashboard w-screen pl-[6rem] overflow-auto h-screen">
+      <div className="w-screen pl-[6rem] overflow-auto h-screen">
         <div className="flex justify-center items-center h-screen">
-          <div className="bg-white rounded-lg shadow-lg w-1/3">
+          <div className="bg-white rounded-lg shadow-2xl w-1/3">
             <div className="flex justify-center items-center p-6">
               <img
                 className="h-24 w-24 rounded-full"
@@ -38,6 +38,7 @@ const Profile = () => (
                 alt="Profile"
               />
             </div>
+            <div className="divider m-0 px-6" />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Samantha Davis</div>
               <p className="text-gray-700 text-base">

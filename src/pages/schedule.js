@@ -1,3 +1,4 @@
+import TitleCard from "@/components/TitleCard";
 import Link from "next/link";
 import React, { useState } from "react";
 import Calendar from "react-calendar";
@@ -31,16 +32,11 @@ export default function Schedule() {
   return (
     //center div to screen horizontally and vertically
     <>
-      <div className="flex items-center justify-center min-h-screen pl-[6rem]">
+      <div className="flex items-center justify-center min-h-screen pl-[6rem] w-fit">
         <div className="container">
-          <h1 className="text-4xl mb-4">Schedule</h1>
-          <Calendar onChange={onChange} value={value} />
-          <Link
-            href="/"
-            className="mt-4 inline-block bg-primary text-white rounded px-4 py-2"
-          >
-            Go back
-          </Link>
+          <TitleCard title="Schedule">
+            <Calendar onChange={onChange} value={value} />
+          </TitleCard>
         </div>
       </div>
     </>

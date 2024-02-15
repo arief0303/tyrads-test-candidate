@@ -39,7 +39,7 @@ export default function Contact() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <div className="flex flex-col w-full p-8 space-y-4 items-center bg-white dark:bg-white-400 sm:w-96 sm:px-10 sm:py-16 rounded-xl shadow-lg z-10">
+      <div className="flex flex-col w-full p-8 space-y-4 items-center bg-white dark:bg-white-400 sm:w-96 sm:px-10 sm:py-16 rounded-xl shadow-2xl z-10">
         <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl text-gray-900 dark:text-black">Contact Us</h1>
         <form className="w-full" onSubmit={handleSubmit}>
           <input className="w-full px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-600" type="text" name="name" placeholder="Name" onChange={handleInputChange} />
