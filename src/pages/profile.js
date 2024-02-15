@@ -19,7 +19,7 @@ const Profile = () => (
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Samantha Davis</div>
               <p className="text-gray-700 text-base">
-                Samantha Davis is a frontend developer specializing in front-end
+                Samantha Davis is a software developer specializing in front-end
                 development.
               </p>
             </div>
