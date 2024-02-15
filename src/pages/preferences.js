@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 function checkUserAuthentication(req) {
   // Check the request headers, cookies, etc. to see if the user is authenticated.
   // Return true if they are, false if they are not.
-  return req.cookies.authenticated === 'true';
+  return req.cookies.authenticated === "true";
 }
 
 export async function getServerSideProps(context) {
@@ -12,14 +12,14 @@ export async function getServerSideProps(context) {
   if (!isAuthenticated) {
     return {
       redirect: {
-        destination: '/login',
+        destination: "/login",
         permanent: false,
       },
-    }
+    };
   }
 
   // If the user is authenticated, return the normal props.
-  return { props: {} }
+  return { props: {} };
 }
 
 export default function Preferences() {
@@ -33,45 +33,49 @@ export default function Preferences() {
       ...preference,
       [event.target.name]: event.target.checked,
     }); */
-    alert('This feature is not available yet.');
+    alert("This feature is not available yet.");
     return;
   };
 
   useEffect(() => {
     if (preference.darkMode) {
-      document.body.classList.add('dark');
+      document.body.classList.add("dark");
     } else {
-      document.body.classList.remove('dark');
+      document.body.classList.remove("dark");
     }
   }, [preference.darkMode]);
 
   return (
-    <div className="p-4 pl-[6rem]">
-      <h1 className="text-2xl font-bold mb-4">Preferences</h1>
-      <div className="space-y-4">
-        <div>
-          <label className="flex items-center space-x-3">
-            <input
-              type="checkbox"
-              name="notifications"
-              checked={preference.notifications}
-              onChange={handleInputChange}
-              className="form-checkbox h-5 w-5 text-blue-600"
-            />
-            <span className="text-gray-900 font-medium">Enable Notifications</span>
-          </label>
-        </div>
-        <div>
-          <label className="flex items-center space-x-3">
-            <input
-              type="checkbox"
-              name="darkMode"
-              checked={preference.darkMode}
-              onChange={handleInputChange}
-              className="form-checkbox h-5 w-5 text-blue-600"
-            />
-            <span className="text-gray-900 font-medium">Enable Dark Mode</span>
-          </label>
+      <div className="flex items-center justify-center min-h-screen pl-[6rem]">
+        <div className="container">
+          <h1 className="text-4xl mb-4">Preferences</h1>
+          <div className="space-y-4">
+            <div>
+              <label className="flex items-center space-x-3">
+                <input
+                  type="checkbox"
+                  name="notifications"
+                  className="form-checkbox h-5 w-5 text-blue-600"
+                />
+                <span className="text-gray-900 font-medium">
+                  Enable Notifications
+                </span>
+              </label>
+            </div>
+            <div>
+              <label className="flex items-center space-x-3">
+                <input
+                  type="checkbox"
+                  name="darkMode"
+                  checked={preference.darkMode}
+                  onChange={handleInputChange}
+                  className="form-checkbox h-5 w-5 text-primary"
+                />
+                <span className="text-gray-900 font-medium">
+                  Enable Dark Mode
+                </span>
+              </label>
+            </div>
         </div>
       </div>
     </div>

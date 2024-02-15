@@ -1,10 +1,10 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
 function checkUserAuthentication(req) {
   // Check the request headers, cookies, etc. to see if the user is authenticated.
   // Return true if they are, false if they are not.
-  return req.cookies.authenticated === 'true';
+  return req.cookies.authenticated === "true";
 }
 
 export async function getServerSideProps(context) {
@@ -13,43 +13,29 @@ export async function getServerSideProps(context) {
   if (!isAuthenticated) {
     return {
       redirect: {
-        destination: '/login',
+        destination: "/login",
         permanent: false,
       },
-    }
+    };
   }
 
   // If the user is authenticated, return the normal props.
-  return { props: {} }
+  return { props: {} };
 }
 
 const Notification = () => (
-  <div className="min-h-screen py-6 flex flex-col justify-center sm:py-12">
-    <div className="relative py-3 sm:max-w-xl sm:mx-auto">
-      <div className="relative px-4 py-10 bg-white mx-8 md:mx-0 shadow rounded-3xl sm:p-10">
-        <div className="max-w-md mx-auto">
-          <div className="flex items-center space-x-5">
-            <div className="block pl-2 font-semibold text-xl self-start text-gray-700">
-              <h2 className="leading-relaxed">Notifications</h2>
-              <p className="text-sm text-gray-500 font-normal leading-relaxed">You have 3 new notifications.</p>
-            </div>
-          </div>
-          <div className="divide-y divide-gray-200">
-            <div className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
-              <p>Notification 1</p>
-              <p>Notification 2</p>
-              <p>Notification 3</p>
-            </div>
-            <div className="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7">
-              <p>
-                  <Link href="/" className="text-primary hover:text-blue-800" >Go back to Home.</Link>
-              </p>
-            </div>
-          </div>
-        </div>
+  <>
+    <div className="flex items-center justify-center min-h-screen pl-[6rem]">
+      <div className="container">
+        <h1 className="text-4xl mb-4">Notifications</h1>
+        <ul className="space-y-2">
+          <li className="bg-white rounded shadow p-4 w-52">Notification 1</li>
+          <li className="bg-white rounded shadow p-4 w-52">Notification 2</li>
+          <li className="bg-white rounded shadow p-4 w-52">Notification 3</li>
+        </ul>
       </div>
     </div>
-  </div>
+  </>
 );
 
 export default Notification;
