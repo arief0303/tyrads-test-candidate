@@ -11,7 +11,7 @@ export const daisyui = {
       light: {
         ...require("daisyui/src/theming/themes")["light"],
         primary: "#535ce5",
-        secondary: "teal",
+        secondary: "#139cd4",
       },
     },
   ], // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
