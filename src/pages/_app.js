@@ -5,7 +5,6 @@ import { AnimatePresence, motion } from 'framer-motion';
 export default function App({ Component, pageProps, router }) {
   return (
     <div>
-      <Sidebar />
       <AnimatePresence mode='wait'>
         <motion.div key={router.route} initial="pageInitial" animate="pageAnimate" variants={{
           pageInitial: {
@@ -15,6 +14,7 @@ export default function App({ Component, pageProps, router }) {
             opacity: 1
           },
         }}>
+          <Sidebar />
           <Component {...pageProps} />
         </motion.div>
       </AnimatePresence>
